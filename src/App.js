@@ -15,6 +15,7 @@ class App extends Component {
     this.props.store.dispatch({
       type: 'GET_COUNT_OF_USERS',
     });
+    console.log(this.props.users)
   }
 
   render() {
@@ -34,8 +35,8 @@ class App extends Component {
 }
 
 const mapStateToProps = (state) => {
-  debugger;
-  return { items: state.items }
+  // debugger;
+  return { items: state.items, users: state.users }
 }
 
 export default connect(mapStateToProps)(App);
